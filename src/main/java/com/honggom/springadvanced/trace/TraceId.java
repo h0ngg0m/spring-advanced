@@ -25,6 +25,10 @@ public class TraceId {
         return new TraceId(this.id, this.level + 1);
     }
 
+    public TraceId createPreviousId() {
+        return new TraceId(this.id, this.level - 1);
+    }
+
     public boolean ifFirstLevel() {
         return this.level == 0;
     }
